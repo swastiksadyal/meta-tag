@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    width: 100%;
+    max-width: 680px;
+}
+
+info {
+    font-family: 'Roboto Mono', monospace;
+}
+
+input {
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid black;
+    color: #111;
+    font-size: 15px;
+    box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
+    height: 58px;
+    transform: skew(-3deg, 1deg);
+    font-family: 'Knewave', cursive;
+    letter-spacing: 2px;
+    ;
+}
+
+input:focus,
+input:valid {
+    outline: none;
+}
+
+label {
+    position: relative;
+}
