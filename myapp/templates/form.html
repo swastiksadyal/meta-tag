@@ -1,0 +1,47 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts and links start here-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS enter here -->
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+    <form method="post">
+        {% csrf_token %} {{ form }}
+        <button type="submit" hidden="True">submit</button>
+    </form>
+    <info 
+    style=
+    "font-family: 'Roboto Mono', monospace; 
+    font-size: small;
+    ">
+    {% autoescape off %}
+    <br> {{ name }}<br> {% for i in result %}
+    <!-- make it pretty-->
+    <br>{{ i }} 
+    {% endfor %}
+    {% endautoescape %}
+    </info>
+</label>
+
+    <footer style="
+    position: relative;
+    height: 80vh;
+    width: -80vw;
+    ">
+        Made by <a href="https://swastiksadyal.github.io/">Swastik</a> 🎈
+    </footer>
+
+</body>
+
+</html>
